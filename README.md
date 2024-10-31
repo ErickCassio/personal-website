@@ -30,12 +30,12 @@ Below is a brief description of the project's directory structure:
 
 ```bash
 ├── public
-│   ├── img             # Images and backgrounds
 │   └── index.html      # Main HTML file
 ├── src
 │   ├── components      # React components used on the site
+│   ├── img             # Images and backgrounds
 │   ├── icons           # Custom icons used in the menu and sections
-│   ├── styles          # Style files (CSS and Tailwind)
+│   └── index.css       # Styles file (CSS and Tailwind)
 │   └── App.js          # Main React component
 │   └── index.js        # Application entry point
 ├── .gitignore          # Files and directories ignored by Git
