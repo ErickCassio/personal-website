@@ -75,7 +75,7 @@ const Contacts = () => {
         </div>
 
         {/* Form section with fields for name, contact, and message */}
-        <div className="flex flex-col space-y-4 w-full px-8 pt-16 sm:pt-20">
+        <div className="flex flex-col space-y-4 w-full px-8 pt-16 pb-8 sm:pb-0 sm:pt-20">
           <div>
             <label
               for="name"
@@ -152,7 +152,7 @@ const Contacts = () => {
       </div>
 
       {/* Footer displays current year and author name */}
-      <div className="flex items-start w-full pt-9 py-3 ps-8 sm:ps-14 text-white montserrat-font">
+      <div className="flex items-start w-full pt-9 pb-8 sm:pb-3 py-3 ps-8 sm:ps-14 text-white montserrat-font">
         <p>© Erick Ribeiro {currentYear}</p>
       </div>
     </div>
