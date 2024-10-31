@@ -6,35 +6,30 @@ html,
 body {
   margin: 0;
   height: 100%;
-  overflow: hidden; /* Oculta a barra de rolagem no body */
+  overflow: hidden; /* Hides scrollbar on body */
   scroll-behavior: smooth;
 }
-/*
-nav {
-  background-color: rgba(0, 0, 0, 0);
-  backdrop-filter: blur(20px);
-}*/
 
 .scrollbar-hide::-webkit-scrollbar {
-  display: none;
+  display: none; /* Hides scrollbar for WebKit browsers */
 }
 .scrollbar-hide {
-  -ms-overflow-style: none; /* IE and Edge */
-  scrollbar-width: none; /* Firefox */
+  -ms-overflow-style: none; /* Hides scrollbar for IE and Edge */
+  scrollbar-width: none; /* Hides scrollbar for Firefox */
 }
 
 .default-background {
   background-image: url("./img/background.jpg");
-  background-size: cover; /* Ajusta a imagem para cobrir todo o elemento */
-  background-position: center; /* Centraliza a imagem */
-  background-repeat: no-repeat; /* Evita que a imagem se repita */
-  height: 100%; /* Altura do elemento, neste caso 100% da altura da janela */
-  width: 100%; /* Largura total do elemento */
+  background-size: cover; /* Stretches image to cover entire element */
+  background-position: center; /* Centers the image */
+  background-repeat: no-repeat; /* Prevents the image from repeating */
+  height: 100%; /* Sets element height to 100% of viewport */
+  width: 100%; /* Sets element width to 100% of viewport */
 }
 
 .glassmorphism {
   background-color: rgba(0, 0, 0, 0);
-  backdrop-filter: blur(100px);
+  backdrop-filter: blur(100px); /* Adds a blur effect for glassmorphism */
 }
 
 .montserrat-font {
@@ -50,45 +45,45 @@ nav {
 }
 
 .scroll-container {
-  height: 100vh; /* Altura total da viewport */
-  overflow-y: scroll; /* Permite rolagem vertical */
-  scroll-snap-type: y mandatory; /* Ativa o scroll snap vertical */
-  scroll-behavior: smooth; /* Rolagem suave */
+  height: 100vh; /* Sets container height to viewport height */
+  overflow-y: scroll; /* Enables vertical scrolling */
+  scroll-snap-type: y mandatory; /* Activates vertical scroll snapping */
+  scroll-behavior: smooth; /* Smooth scrolling */
 }
 
-/* Oculta a barra de rolagem em diferentes navegadores */
+/* Hides scrollbar in different browsers */
 .scroll-container::-webkit-scrollbar {
-  display: none; /* Oculta a barra de rolagem no WebKit (Chrome, Safari) */
+  display: none; /* Hides scrollbar in WebKit browsers (Chrome, Safari) */
 }
 
 .scroll-container {
-  -ms-overflow-style: none; /* Oculta a barra de rolagem no IE e Edge */
-  scrollbar-width: none; /* Oculta a barra de rolagem no Firefox */
+  -ms-overflow-style: none; /* Hides scrollbar in IE and Edge */
+  scrollbar-width: none; /* Hides scrollbar in Firefox */
 }
 
 .page-block {
-  scroll-snap-align: start; /* Alinha o bloco no início do contêiner */
-  scroll-snap-stop: always; /* Garante que o bloco pare na posição de rolagem */
+  scroll-snap-align: start; /* Aligns block to the start of container */
+  scroll-snap-stop: always; /* Ensures block stops at snap point */
   display: flex;
   align-items: center;
   justify-content: center;
-  position: relative; /* Garante que o Particle pode ser posicionado absolutamente dentro do bloco */
+  position: relative; /* Allows absolute positioning within block */
 }
 
-/* Ajusta o primeiro bloco para garantir que o Particle cubra todo o fundo */
+/* Adjusts the first block to ensure Particle effect covers the background */
 .page-block:first-child {
   position: relative;
-  overflow: hidden; /* Garante que o Particle não ultrapasse os limites do bloco */
+  overflow: hidden; /* Ensures Particle effect stays within block limits */
 }
 
 @media (max-width: 638px) {
   .scroll-container {
-    scroll-snap-type: none; /* Desativa o scroll snap em dispositivos móveis */
-    overflow-y: auto; /* Permite rolagem normal */
+    scroll-snap-type: none; /* Disables scroll snapping on mobile devices */
+    overflow-y: auto; /* Enables normal scrolling */
     scroll-behavior: auto;
   }
 
   .block {
-    scroll-snap-align: none; /* Desativa o alinhamento de snapping */
+    scroll-snap-align: none; /* Disables snapping alignment */
   }
 }
