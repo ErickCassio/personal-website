@@ -20,10 +20,6 @@ This project was built with the following technologies:
 - **Contact Form**: integrated with `mailto:` to open the user's email client upon clicking "send."
 - **Social Media Links**: GitHub and LinkedIn.
 
-## 📸 Screenshots
-
-> Add images or GIFs of the main sections of the site to give a visual overview of the project.
-
 ## 📁 Project Structure
 
 Below is a brief description of the project's directory structure:
