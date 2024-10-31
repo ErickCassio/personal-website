@@ -1,13 +1,94 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html,
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  height: 100%;
+  overflow: hidden; /* Oculta a barra de rolagem no body */
+  scroll-behavior: smooth;
+}
+/*
+nav {
+  background-color: rgba(0, 0, 0, 0);
+  backdrop-filter: blur(20px);
+}*/
+
+.scrollbar-hide::-webkit-scrollbar {
+  display: none;
+}
+.scrollbar-hide {
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+.default-background {
+  background-image: url("./img/background.jpg");
+  background-size: cover; /* Ajusta a imagem para cobrir todo o elemento */
+  background-position: center; /* Centraliza a imagem */
+  background-repeat: no-repeat; /* Evita que a imagem se repita */
+  height: 100%; /* Altura do elemento, neste caso 100% da altura da janela */
+  width: 100%; /* Largura total do elemento */
+}
+
+.glassmorphism {
+  background-color: rgba(0, 0, 0, 0);
+  backdrop-filter: blur(100px);
+}
+
+.montserrat-font {
+  font-family: "Montserrat", sans-serif;
+}
+
+.primary-color {
+  color: #67eafe;
+}
+
+#tsparticles {
+  height: 100%;
+}
+
+.scroll-container {
+  height: 100vh; /* Altura total da viewport */
+  overflow-y: scroll; /* Permite rolagem vertical */
+  scroll-snap-type: y mandatory; /* Ativa o scroll snap vertical */
+  scroll-behavior: smooth; /* Rolagem suave */
+}
+
+/* Oculta a barra de rolagem em diferentes navegadores */
+.scroll-container::-webkit-scrollbar {
+  display: none; /* Oculta a barra de rolagem no WebKit (Chrome, Safari) */
+}
+
+.scroll-container {
+  -ms-overflow-style: none; /* Oculta a barra de rolagem no IE e Edge */
+  scrollbar-width: none; /* Oculta a barra de rolagem no Firefox */
+}
+
+.page-block {
+  scroll-snap-align: start; /* Alinha o bloco no início do contêiner */
+  scroll-snap-stop: always; /* Garante que o bloco pare na posição de rolagem */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative; /* Garante que o Particle pode ser posicionado absolutamente dentro do bloco */
+}
+
+/* Ajusta o primeiro bloco para garantir que o Particle cubra todo o fundo */
+.page-block:first-child {
+  position: relative;
+  overflow: hidden; /* Garante que o Particle não ultrapasse os limites do bloco */
+}
+
+@media (max-width: 638px) {
+  .scroll-container {
+    scroll-snap-type: none; /* Desativa o scroll snap em dispositivos móveis */
+    overflow-y: auto; /* Permite rolagem normal */
+    scroll-behavior: auto;
+  }
+
+  .block {
+    scroll-snap-align: none; /* Desativa o alinhamento de snapping */
+  }
 }
