@@ -49,7 +49,7 @@ Below is a brief description of the project's directory structure:
 
 1. Clone the repository:
    ```bash
-   git clone https://github.com/your-username/repository-name.git
+   git clone https://github.com/ErickCassio/personal-website
    ```
 2. Navigate to the project directory:
    ```bash
